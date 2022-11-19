@@ -12,9 +12,10 @@
             .then((json) => this.movie = json);
     }
 }" x-init="getMovies()">
-    <p x-text="data"></p>
-    <p x-text="movie"></p>
+    <p x-text="1"></p>
+    <p x-text="genre[1]"></p>
 </div>
+
 
 <script>function getMovies() {
     fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
