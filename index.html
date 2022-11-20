@@ -8,19 +8,19 @@
 <h1>Best movies</h1>
 <body>
 
-<div x-data="{
-    movie: null,
-    getMovies() {
-        fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
-            .then((response) => response.json())
-            .then((json) => this.movie = json);
-    }
-}" x-init="getMovies()" class="text-center">
-    <p x-text="movie.data[0].genre"></p>
-    <p x-text="movie.data[0].movies"></p>
-    <p x-text="movie.data[1].genre"></p>
-    <p x-text="movie.data[1].movies"></p>
-</div>
+<!--<div x-data="{-->
+<!--    movie: null,-->
+<!--    getMovies() {-->
+<!--        fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')-->
+<!--            .then((response) => response.json())-->
+<!--            .then((json) => this.movie = json);-->
+<!--    }-->
+<!--}" x-init="getMovies()" class="text-center">-->
+<!--    <p x-text="movie.data[0].genre"></p>-->
+<!--    <p x-text="movie.data[0].movies"></p>-->
+<!--    <p x-text="movie.data[1].genre"></p>-->
+<!--    <p x-text="movie.data[1].movies"></p>-->
+<!--</div>-->
 
 <div class="container py-5">
   <!-- For Demo Purpose -->
