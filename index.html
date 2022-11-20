@@ -12,8 +12,8 @@
             .then((json) => this.movie = json);
     }
 }" x-init="getMovies()">
-    <p x-text="genre?.id?.genre?.movies?"></p>
-    <p x-text="genre.id[1].name"></p>
+    <p x-text="movie.genre[1]"></p>
+    <p x-text="movie.id[1]"></p>
 </div>
 
 <script>function getMovies() {
