@@ -7,14 +7,7 @@
 </head>
 <h1>Best movies</h1>
 <body>
-<script>
-    function getMovies() {
-    fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
-        .then((response) => response.json())
-        .then((json) => this.movie = json);
-    }
-    getMovies()
-</script>
+
 <!--<div x-data="{-->
 <!--    movie: null,-->
 <!--    getMovies() {-->
@@ -116,7 +109,7 @@
                         </li>
                     </ul>
                 </div>
-                <button type="submit" class=" mt-2 btn btn-primary" @click="create_genre()">Submit</button>
+                <button type="submit" class=" mt-2 btn btn-primary" x-on:click="create_genre()">Submit</button>
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
