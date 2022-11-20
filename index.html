@@ -23,7 +23,7 @@
                         genre: null,
                         movie: null
                         }}" x-init="(async () => {
-                                  const response = await fetch('https://fastapi-samir-elha.cloud.okteto.net/genre/')
+                                  const response = await fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
                                   if (! response.ok) alert(`Something went wrong: ${response.status} - ${response.statusText}`)
                                   data = await response.json()
                                   genre = {
