@@ -26,10 +26,16 @@
             .then((json) => this.movie = json);
     }
 }" x-init="getMovies()" class="text-center">
+    <div class="row">
+        <div class="col-md">
     <p x-text="movie.data[0].genre"></p>
     <p x-text="movie.data[0].movies"></p>
+        </div>
+    <div class="col-md">
     <p x-text="movie.data[1].genre"></p>
     <p x-text="movie.data[1].movies"></p>
+        </div>
+        </div>
 </div>
 
         <div class="col-4 order-1" id="post_song" x-data="{
