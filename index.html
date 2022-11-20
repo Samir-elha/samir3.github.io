@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="index.css">
 </head>
-<body class="bg-info">
+<body class="bg-danger">
 <div class="container py-5">
   <!-- For Demo Purpose -->
   <header class="text-center">
@@ -17,7 +17,7 @@
   <div class="py-5">
     <h3 class="font-weight-bold mb-0">Genres</h3>
     <p class="font-italic text-muted mb-4">You will find our best movies by genre</p>
-  </div>
+
 <div x-data="{
     movie: null,
     getMovies() {
@@ -84,6 +84,7 @@
   </div>
 
     <button type="submit" class="text-center mt-2 btn btn-primary" x-on:click="create_genre()">Submit</button>
+</div>
 </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 
