@@ -47,7 +47,7 @@
     </div>
     </div>
     <div class="mb-2  md:flex flex justify-end">
-      <button x-on:click="(async () => {    const response = await fetch('https://fastapi-samir-elha.cloud.okteto.net/genre', {
+      <button onclick="(async () => {    const response = await fetch('https://fastapi-samir-elha.cloud.okteto.net/genre', {
                                         method: 'POST',
                                         body: JSON.stringify(genre)
                                     })
