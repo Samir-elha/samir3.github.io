@@ -13,7 +13,7 @@
             .then((json) => this.movie = json);
     }
 }" x-init="getMovies()">
-    <p x-text="movie?.genre?.id[1]"></p>
+    <p x-text="movie"></p>
     <p x-text="movie?.id?"></p>
 </div>
 
@@ -22,7 +22,7 @@
     fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
         .then((response) => response.json())
         .then((json) => this.movie = json);
-}
+    }
 </script>
 </body>
 </html>
