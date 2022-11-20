@@ -7,12 +7,12 @@
     movie: null,
 
     getMovies() {
-        fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
+        fetch('https://fastapi-samir-elha.cloud.okteto.net/genre/1')
             .then((response) => response.json())
             .then((json) => this.movie = json);
     }
 }" x-init="getMovies()">
-    <p x-text="1"></p>
+    <p x-text="movie.name"></p>
     <p x-text="genre.id[1].name"></p>
 </div>
 
