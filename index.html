@@ -3,51 +3,23 @@
     <script defer src="https://unpkg.com/alpinejs@3.5.0/dist/cdn.min.js"></script>
 </head>
 <body>
-<!--<div x-data="{-->
-<!--    movie: null,-->
+<div x-data="{
+    movie: null,
 
-<!--    getMovies() {-->
-<!--        fetch('https://fastapi-samir-elha.cloud.okteto.net/genre/1')-->
-<!--            .then((response) => response.json())-->
-<!--            .then((json) => this.movie = json);-->
-<!--    }-->
-<!--}" x-init="getMovies()">-->
-<!--    <p x-text="movie.name"></p>-->
-<!--    <p x-text="genre.id[1].name"></p>-->
-<!--</div>-->
+    getMovies() {
+        fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
+            .then((response) => response.json())
+            .then((json) => this.movie = json);
+    }
+}" x-init="getMovies()">
+    <p x-text="genre?.id?.genre?.movies?"></p>
+    <p x-text="genre.id[1].name"></p>
+</div>
 
- <div x-data="{
-        responsedata: null,
-        async getData() {
-            this.responsedata = await (await fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')).json();
-
-        }
-    }">
-        <button x-on:click="getData">Send get request</button>
-        Data returned: <strong x-text='responsedata["genre"].movies'>Placeholder</strong>
-
-
-    </div>
-    <div x-data="{
-    responsedata: null,
-    async searchData(name) {
-        this.responsedata = await (await fetch('https://animal-service-jonasdeweerdt.cloud.okteto.net/animal?name='+name)).json();
-
-        }
-    }">
-        <input type="text" x-model="name" autofocus="autofocus" autocapitalize="off">
-        <button x-on:click="searchData(name)">Search animal</button>
-        <strong x-text='responsedata["genre"][1].genre'>Placeholder</strong>
-
-<script type="text/javascript">
-            responsedata = await (await fetch('https://fastapi-samir-elha.cloud.okteto.net/genre/1')).json();
-            console.log(responsedata["genre"][1].id);
-        </script>
-
-<!--<script>function getMovies() {-->
-<!--    fetch('https://fastapi-samir-elha.cloud.okteto.net/genre/1')-->
-<!--        .then((response) => response.json())-->
-<!--        .then((json) => this.movie = json);-->
-<!--}</script>-->
+<script>function getMovies() {
+    fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
+        .then((response) => response.json())
+        .then((json) => this.movie = json);
+}</script>
 </body>
 </html>
