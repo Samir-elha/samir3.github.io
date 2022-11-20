@@ -17,10 +17,12 @@
     <p x-text="movie?.id?"></p>
 </div>
 
-<script>function getMovies() {
+<script>
+    function getMovies() {
     fetch('https://fastapi-samir-elha.cloud.okteto.net/genre')
         .then((response) => response.json())
         .then((json) => this.movie = json);
-}</script>
+}
+</script>
 </body>
 </html>
