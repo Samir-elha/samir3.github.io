@@ -13,7 +13,7 @@
             .then((json) => this.movie = json);
     }
 }" x-init="getMovies()">
-    <p x-text="movie"></p>
+    <p x-text="movie.data.id[1]"></p>
     <p x-text="movie?.id?"></p>
 </div>
 
